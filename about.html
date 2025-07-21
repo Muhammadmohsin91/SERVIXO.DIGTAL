@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Servixo.Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #e2ebf0);
+      color: #222;
+    }
+
+    header {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 20px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    
+
+    .alt-card-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .alt-card {
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      transition: 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .alt-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .alt-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .alt-card-text {
+      padding: 30px;
+    }
+
+    .alt-card-text h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #2575fc;
+    }
+
+    .alt-card-text p {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      background: #2575fc;
+      color: #fff;
+      padding: 30px;
+      font-weight: 500;
+      margin-top: 80px;
+      border-radius: 16px 16px 0 0;
+    }
+  </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servixo | Premium Navbar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Urbanist', sans-serif;
+      background: #ffffff;
+      height: 2000px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 8%;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.85);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(12px);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .navbar.hide {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .navbar-brand img {
+      height: 68px;
+      transition: transform 0.4s ease;
+      filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.08));
+      border-radius: 16px;
+    }
+
+    .navbar-brand img:hover {
+      transform: scale(1.08);
+    }
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #001f3f;
+  letter-spacing: 0.8px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.logo-text span {
+  background: linear-gradient(120deg, #00d4d4, #0077b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 42px;
+    }
+
+    .nav-links li a {
+      color: #001f3f;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #007bff;
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links li a:hover {
+      color: #007bff;
+      transform: scale(1.05);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-phone {
+      font-size: 0.95rem;
+      color: #001f3f;
+      font-weight: 500;
+    }
+
+    .book-btn {
+      padding: 10px 20px;
+      background: #1d3557;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background: #0056b3;
+      box-shadow: 0 6px 16px rgba(0, 86, 179, 0.3);
+    }
+
+    @media screen and (max-width: 768px) {
+      .nav-links, .nav-right {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="navbar-brand">
+    <img src="SX_Logo_Design_-_Modern_Minimalist_Style-removebg-preview.png.png" alt="Servixo Logo" />
+    <div class="logo-text">Servixo<span>.Digital</span></div>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html#contact">Contact</a></li>
+
+  </ul>
+
+  <div class="nav-right">
+    <div class="nav-phone">📞 +92 300 1234567</div>
+    <a href="contact.html#contact" class="book-btn" target="_blank">Book Consultation</a>
+  </div>
+</header>
+
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+      navbar.classList.add("hide");
+    } else {
+      navbar.classList.remove("hide");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Choose Us | Servixo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 140px 20px 100px; /* 👈 Top space increased */
+      background: #ffffff;
+      color: #222;
+    }
+
+    .why-choose-section {
+      padding: 100px 20px;
+      background: #ffffff;
+    }
+
+    .why-choose-content {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .why-choose-content h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .why-choose-content p {
+      font-size: 1.1rem;
+      margin-bottom: 60px;
+      color: #555;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+.feature {
+  text-align: center;
+  max-width: 180px;
+  padding: 20px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.feature::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle at center, rgba(37,117,252,0.2), transparent 70%);
+  z-index: -1;
+  transform: rotate(25deg);
+}
+
+.feature:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature i {
+  font-size: 32px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #1d3557, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.feature h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.feature p {
+  font-size: 0.8rem;
+  color: #f1f1f1;
+  line-height: 1.5;
+}
+
+/* Smooth glow animation */
+@keyframes pulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.4); }
+}
+
+
+    .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+.feature i {
+  font-size: 36px;
+  background: linear-gradient(to right, #1d3557, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+
+
+    .feature h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #001f3f;
+    }
+
+    .feature p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .why-choose-content h2 {
+        font-size: 2rem;
+      }
+
+      .feature {
+        max-width: 100%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ✅ Why Choose Us Section -->
+  <section class="why-choose-section">
+    <div class="why-choose-content">
+      <h2>Why People Trust Servixo?</h2>
+      <p>We go beyond basic services. Servixo delivers creative solutions, fast execution, and real results — without the clutter. Here's what sets us apart.</p>
+
+      <div class="features">
+        <div class="feature">
+          <i class="fas fa-lightbulb"></i>
+          <h4>Creative Approach</h4>
+          <p>Unique solutions tailored to your brand’s personality and goals.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-bolt"></i>
+          <h4>Fast Execution</h4>
+          <p>Quick turnarounds without compromising on quality and detail.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-chart-line"></i>
+          <h4>Real Results</h4>
+          <p>Strategies backed by data and proven to grow your business.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-users"></i>
+          <h4>Trusted by Many</h4>
+          <p>We’ve worked with startups to brands, always delivering excellence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Edge | Servixo</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1d3557;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .our-edge {
+      position: relative;
+      padding: 80px 20px 40px; /* Reduced bottom padding */
+      overflow: hidden;
+    }
+
+    .our-edge::before,
+    .our-edge::after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, #2575fc33, transparent 70%);
+      filter: blur(60px);
+      z-index: 0;
+    }
+
+    .our-edge::before {
+      top: 0;
+      left: 0;
+    }
+
+    .our-edge::after {
+      bottom: 0;
+      right: 0;
+    }
+
+    .edge-wrapper {
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .edge-wrapper h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .edge-wrapper p {
+      text-align: center;
+      color: #cfcfcf;
+      max-width: 640px;
+      margin: 0 auto 40px;
+      font-size: 1rem;
+    }
+
+    .edge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .edge-card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(8px);
+      padding: 20px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .edge-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(37, 117, 252, 0.25);
+    }
+
+    .edge-card i {
+      font-size: 26px;
+      color: #57b2ff;
+      text-shadow: 0 0 6px #57b2ff;
+      margin-bottom: 10px;
+    }
+
+    .edge-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .edge-card p {
+      color: #cccccc;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .edge-wrapper h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* ✅ Force-remove any extra bottom */
+    body::after {
+      content: "";
+      display: none !important;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ✅ EDGE SECTION -->
+  <section class="our-edge">
+    <div class="edge-wrapper">
+      <h2>Why Choose <span style="color: #57b2ff;">Servixo</span></h2>
+      <p>We deliver results with unmatched dedication, modern tools, and deep strategic insight — giving your business a real competitive edge.</p>
+
+      <div class="edge-grid">
+        <div class="edge-card">
+          <i class="fas fa-lightbulb"></i>
+          <h4>Creative Thinking</h4>
+          <p>We solve problems uniquely, making your brand stand out in a saturated digital space.</p>
+        </div>
+        <div class="edge-card">
+          <i class="fas fa-bolt"></i>
+          <h4>Fast Execution</h4>
+          <p>We turn ideas into action with speed, so your business doesn't miss a single opportunity.</p>
+        </div>
+        <div class="edge-card">
+          <i class="fas fa-chart-line"></i>
+          <h4>Proven Growth</h4>
+          <p>With measurable outcomes and success stories, we’re not just talk — we deliver results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+<!-- 🌌 ULTIMATE HAT KE SECTION -->
+<section class="vision-section">
+  <div class="vision-container">
+    <h2>We Don’t Just Build — <span>We Transform</span></h2>
+    <p class="intro">
+      In a world full of templates, ads, and trends, we choose something different — **meaning**.  
+      At <strong>Servixo.Digital</strong>, we don’t chase algorithms — we **connect with real humans** behind the screen.
+    </p>
+
+    <div class="vision-grid">
+      <div class="vision-point">
+        <h3><i class="fas fa-eye"></i> Vision That Matters</h3>
+        <p>Every business has a story. We craft digital journeys that speak louder than just visuals.  
+        Our goal isn’t to impress — it’s to leave a mark that resonates.</p>
+      </div>
+      <div class="vision-point">
+        <h3><i class="fas fa-handshake"></i> Partnership, Not Projects</h3>
+        <p>You’re not a client — you’re a growth partner.  
+        We collaborate, brainstorm, and build as one unit, driven by trust, clarity, and shared purpose.</p>
+      </div>
+      <div class="vision-point">
+        <h3><i class="fas fa-brain"></i> Creative with Intelligence</h3>
+        <p>Our strategies are bold — but backed by data and human behavior.  
+        Because creativity without intent is just noise. We believe in <em>smart disruption</em>.</p>
+      </div>
+    </div>
+
+    <blockquote>
+      “The brands that win aren't the loudest — they're the most meaningful.”
+    </blockquote>
+
+    <a href="contact.html#contact" class="vision-btn" target="_blank">Let’s Create Something That Lasts 💡</a>
+  </div>
+</section>
+
+<!-- 🌌 STYLES -->
+<style>
+.vision-section {
+  background: #ffffff;
+  padding: 120px 20px 100px;
+  color: #1d3557;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.vision-section::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, #00e6e6 0%, transparent 60%);
+  opacity: 0.07;
+  z-index: 0;
+}
+.vision-container {
+  max-width: 880px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+.vision-container h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.vision-container h2 span {
+  background: linear-gradient(90deg, #00e6e6, #1d3557);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.vision-container .intro {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 50px;
+  line-height: 1.8;
+}
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  text-align: left;
+}
+.vision-point h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1d3557;
+}
+.vision-point p {
+  font-size: 0.97rem;
+  color: #555;
+  line-height: 1.6;
+}
+.vision-point i {
+  color: #00cfcf;
+  font-size: 1.3rem;
+}
+blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #2a2a2a;
+  margin: 60px auto 40px;
+  max-width: 640px;
+}
+.vision-btn {
+  background: #1d3557;
+  color: #ffffff;
+  padding: 14px 34px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.vision-btn:hover {
+  background: #143049;
+  transform: translateY(-2px);
+}
+@media (min-width: 768px) {
+  .vision-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<section class="crafted-section">
+  <div class="crafted-container">
+    <div class="crafted-text">
+      <h2><span>Every Pixel</span> Has Purpose</h2>
+      <p>
+        Behind every line of code, there’s an idea. A story. A purpose.<br />
+        At Servixo, we build more than websites — we build experiences that echo with intention.<br />
+        Let your brand breathe, speak, and rise in the digital noise.
+      </p>
+    </div>
+    <div class="crafted-glow"></div>
+  </div>
+</section>
+
+<style>
+.crafted-section {
+  background: #0e101a;
+  color: white;
+  padding: 120px 30px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.crafted-container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.crafted-text h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.crafted-text h2 span {
+  color: #00e7ff;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.crafted-text p {
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.crafted-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,212,255,0.15) 0%, transparent 80%);
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(100px);
+  z-index: 1;
+}
+
+@media(max-width: 768px) {
+  .crafted-text h2 {
+    font-size: 2rem;
+  }
+
+  .crafted-text p {
+    font-size: 0.95rem;
+  }
+}
+</style>
+
+
+<!-- 💎 SUPER HEAVY FINAL SECTION (RIGHT SIDE REMOVED) -->
+<section class="ultimate-final-section">
+  <div class="ultimate-bg-shapes"></div>
+  <div class="ultimate-container">
+    <div class="ultimate-left">
+      <h2>Let’s Create the Future, Together</h2>
+      <p>
+        We blend creativity, strategy, and cutting-edge tech to craft brands that leave a mark. From startups to scale-ups — we work with visionaries to build remarkable digital experiences.
+      </p>
+      <a href="contact.html#contact" class="ultimate-btn" target="_blank">Work With Us</a>
+    </div>
+
+    <div class="ultimate-middle">
+      <div class="ultimate-point">
+        <i class="fas fa-lightbulb"></i>
+        <div>
+          <h4>Creative Direction</h4>
+          <p>Fresh ideas that differentiate your brand in saturated markets.</p>
+        </div>
+      </div>
+      <div class="ultimate-point">
+        <i class="fas fa-globe"></i>
+        <div>
+          <h4>Digital Expansion</h4>
+          <p>We help brands expand reach with precision-built web & marketing.</p>
+        </div>
+      </div>
+      <div class="ultimate-point">
+        <i class="fas fa-lock"></i>
+        <div>
+          <h4>Secure by Design</h4>
+          <p>Security and performance are part of everything we build.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.ultimate-final-section {
+  background: linear-gradient(to bottom right, #fefefe, #f0f4ff);
+  position: relative;
+  overflow: hidden;
+  padding: 120px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ultimate-bg-shapes::before,
+.ultimate-bg-shapes::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.ultimate-bg-shapes::before {
+  width: 400px;
+  height: 400px;
+  background: #007bff;
+  top: -100px;
+  left: -100px;
+}
+
+.ultimate-bg-shapes::after {
+  width: 300px;
+  height: 300px;
+  background: #ff6f61;
+  bottom: -80px;
+  right: -80px;
+}
+
+.ultimate-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1150px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.ultimate-left {
+  flex: 1 1 500px;
+}
+
+.ultimate-left h2 {
+  font-size: 36px;
+  color: #001f3f;
+  margin-bottom: 20px;
+}
+
+.ultimate-left p {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.ultimate-btn {
+  background: linear-gradient(135deg, #00e6e6, #1d3557);
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 230, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ultimate-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.ultimate-btn:hover::before {
+  left: 100%;
+}
+
+.ultimate-btn:hover {
+  box-shadow: 0 12px 28px rgba(0, 230, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+
+.ultimate-btn:hover {
+  background-color: #003366;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.ultimate-middle {
+  flex: 1 1 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.ultimate-point {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.ultimate-point i {
+  font-size: 24px;
+  background: linear-gradient(135deg, #00e6e6, #1d3557);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 4px;
+  filter: drop-shadow(0 0 6px rgba(0, 230, 255, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.ultimate-point i:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 12px rgba(0, 230, 255, 0.5));
+}
+
+
+.ultimate-point h4 {
+  font-size: 17px;
+  color: #001f3f;
+  margin: 0;
+}
+
+.ultimate-point p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+</style>
+

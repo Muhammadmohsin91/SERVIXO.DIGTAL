@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Servixo.Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* ✅ RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #1c1c1c;
+    }
+
+    /* ✅ FIXED NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 80px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 999;
+    }
+
+    .navbar .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: #007acc;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #007acc;
+    }
+
+    /* ✅ CONTACT SECTION */
+    .white-contact {
+      padding: 160px 30px 140px; /* Extra top space for fixed navbar */
+    }
+
+    .white-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 80px;
+      max-width: 1400px;
+      margin: auto;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .white-left {
+      flex: 1.5;
+    }
+
+    .white-left h2 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .white-left h2 span {
+      color: #007acc;
+      font-weight: 800;
+    }
+
+    .white-left p {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      opacity: 0.9;
+      max-width: 90%;
+    }
+
+    .white-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      gap: 15px;
+    }
+
+    .white-box {
+      background: #f5f7fa;
+      border: 1px solid #e2e8f0;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .white-box:hover {
+      background: #e6f3ff;
+      transform: translateY(-4px);
+    }
+
+    .white-right {
+      flex: 1;
+      background: #f9fbfd;
+      padding: 50px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    }
+
+    .white-form input,
+    .white-form textarea {
+      width: 100%;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #dce2e7;
+      background: #ffffff;
+      color: #2c2c2c;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .white-form input::placeholder,
+    .white-form textarea::placeholder {
+      color: #8c98a4;
+    }
+
+    .white-form textarea {
+      resize: vertical;
+    }
+
+    .white-form button {
+      width: 100%;
+      padding: 15px;
+      background: #007acc;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .white-form button:hover {
+      background: #005fa3;
+    }
+
+    @media (max-width: 1024px) {
+      .navbar {
+        padding: 16px 30px;
+      }
+
+      .white-container {
+        flex-direction: column;
+        gap: 60px;
+      }
+
+      .white-left h2 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servixo | Premium Navbar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Urbanist', sans-serif;
+      background: #ffffff;
+      height: 2000px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 8%;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.85);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(12px);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .navbar.hide {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .navbar-brand img {
+      height: 68px;
+      transition: transform 0.4s ease;
+      filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.08));
+      border-radius: 16px;
+    }
+
+    .navbar-brand img:hover {
+      transform: scale(1.08);
+    }
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #001f3f;
+  letter-spacing: 0.8px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.logo-text span {
+  background: linear-gradient(120deg, #00d4d4, #0077b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 42px;
+    }
+
+    .nav-links li a {
+      color: #001f3f;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #007bff;
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links li a:hover {
+      color: #007bff;
+      transform: scale(1.05);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-phone {
+      font-size: 0.95rem;
+      color: #001f3f;
+      font-weight: 500;
+    }
+
+    .book-btn {
+      padding: 10px 20px;
+      background: #1d3557;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background: #0056b3;
+      box-shadow: 0 6px 16px rgba(0, 86, 179, 0.3);
+    }
+
+    @media screen and (max-width: 768px) {
+      .nav-links, .nav-right {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="navbar-brand">
+    <img src="SX_Logo_Design_-_Modern_Minimalist_Style-removebg-preview.png.png" alt="Servixo Logo" />
+    <div class="logo-text">Servixo<span>.Digital</span></div>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="nav-phone">📞 +92 300 1234567</div>
+    <a href="#" class="book-btn">Book Consultation</a>
+  </div>
+</header>
+
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+      navbar.classList.add("hide");
+    } else {
+      navbar.classList.remove("hide");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Servixo</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ✅ CONTACT SECTION */
+    .white-contact {
+      flex: 1;
+      width: 100%;
+      background: #fff;
+      padding: 140px 60px 60px;
+    }
+
+    .white-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    .white-left {
+      flex: 1.1;
+      min-width: 320px;
+    }
+
+    .white-left h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #0e101a;
+    }
+
+    .white-left h2 span {
+      color: #0077ff;
+    }
+
+    .white-left p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .white-quote {
+      font-style: italic;
+      background: #f9f9f9;
+      padding: 20px;
+      margin: 30px 0;
+      border-left: 5px solid #0e101a;
+      border-radius: 8px;
+      color: #555;
+    }
+
+    .benefit-list {
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+      line-height: 2;
+      color: #222;
+      font-weight: 500;
+    }
+
+    .benefit-list li {
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .benefit-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #0077ff;
+    }
+
+    .white-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    .white-stats div {
+      text-align: left;
+    }
+
+    .white-stats strong {
+      font-size: 1.8rem;
+      display: block;
+      color: #0e101a;
+    }
+
+    .white-stats span {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .white-right {
+      flex: 1;
+      min-width: 320px;
+      background: #f5f5f5;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .white-right h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #0e101a;
+    }
+
+    .white-right p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .white-form input,
+    .white-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .white-form button {
+      background: #0077ff;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .white-form button:hover {
+      background: #005fe0;
+    }
+
+    @media (max-width: 900px) {
+      .white-container {
+        flex-direction: column;
+      }
+
+      .white-left,
+      .white-right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✅ CONTACT SECTION -->
+<section class="white-contact">
+  <div class="white-container">
+
+    <!-- LEFT TEXT -->
+    <div class="white-left">
+      <h2><span>It Starts With</span> A Conversation</h2>
+      <p>
+        Imagine your brand — elevated, sharpened, unstoppable.<br><br>
+        Whether it’s building from scratch or reigniting a legacy, we become your creative extension — fully invested in your story, voice, and growth.
+      </p>
+
+      <div class="white-quote">
+        "We don't just build websites. We build digital stages where your story performs."
+      </div>
+
+      <ul class="benefit-list">
+        <li>💡 Personalized brand & design direction</li>
+        <li>🔧 End-to-end strategy, UI/UX & development</li>
+        <li>🌍 Multilingual, scalable, global-ready</li>
+        <li>🤝 Long-term digital partnership mindset</li>
+      </ul>
+
+      <div class="white-stats">
+        <div><strong>50+</strong><span> Projects Delivered</span></div>
+        <div><strong>95%</strong><span> Client Satisfaction</span></div>
+        <div><strong>3+</strong><span> Years of Experience</span></div>
+      </div>
+    </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+
+  <style>
+    .white-right {
+      max-width: 600px;
+      margin: auto;
+      background: #f5f3f3e8;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.075);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .white-right h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #1d3557;
+    }
+
+    .white-right p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .white-right form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .white-right input,
+    .white-right textarea {
+      padding: 14px 18px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+      font-family: inherit;
+    }
+
+    .white-right input:focus,
+    .white-right textarea:focus {
+      border-color: #0077b6;
+      box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+    }
+
+    .white-right textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .white-right button {
+      background: linear-gradient(135deg, #00b3c9, #0077b6);
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .white-right button:hover {
+      background: linear-gradient(135deg, #0077b6, #00b3c9);
+      box-shadow: 0 8px 20px rgba(0, 119, 182, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      .white-right {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="white-right">
+    <h3>Let’s Create Something Timeless</h3>
+    <p>Tell us what you have in mind. We’ll take care of the rest.</p>
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+    <form action="https://formspree.io/f/mnqylxyz" method="POST">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="company" placeholder="Brand or Company (Optional)" />
+      <input type="text" name="service" placeholder="Service Needed (e.g. Website, Branding)" />
+      <textarea name="message" rows="6" placeholder="Share your vision, pain points, or wildest idea…" required></textarea>
+      <button type="submit">Send Your Message 🚀</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+  </div>
+</section>
+
+</body>
+</html>

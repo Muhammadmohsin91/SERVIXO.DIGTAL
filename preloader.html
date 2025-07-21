@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Slow Load Loader Test</title>
+<style>
+  /* Loader styles */
+  #loader {
+    display: none;
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(255,255,255,0.95);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #loader .spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #eee;
+    border-top: 6px solid #0077b6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+  #loader p {
+    font-family: Poppins, sans-serif;
+    color: #0077b6;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+  }
+  /* Just to simulate slow loading */
+  #content {
+    display: none;
+    padding: 20px;
+    font-family: Poppins, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Loading, please wait...</p>
+</div>
+
+<div id="content">
+  <h1>Page Loaded!</h1>
+  <p>This content appears after the loader.</p>
+</div>
+
+<script>
+  // Show loader if loading takes longer than 1 second
+  const loader = document.getElementById('loader');
+  const content = document.getElementById('content');
+
+  let showLoaderTimer = setTimeout(() => {
+    loader.style.display = 'flex';
+  }, 1000);
+
+  // Simulate page load delay of 3 seconds (for demo)
+  window.addEventListener('load', () => {
+    clearTimeout(showLoaderTimer);
+    // Delay hiding loader to simulate slow load
+    setTimeout(() => {
+      loader.style.display = 'none';
+      content.style.display = 'block';
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>
