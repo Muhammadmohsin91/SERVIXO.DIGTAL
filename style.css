@@ -2529,3 +2529,34 @@ footer.footer-heavy {
   background: #00e6e6;
   color: white;
 }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.col {
+  flex: 1 1 100%;
+  padding: 10px;
+  background: #f2f2f2;
+  border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  .col {
+    flex: 1 1 48%;
+  }
+}
+</style>
