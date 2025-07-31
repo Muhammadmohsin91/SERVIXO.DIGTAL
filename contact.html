@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Contact Us | Servixo Digital – Let's Build Something Great</title>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="services.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="counters.css" />
+  <link rel="stylesheet" href="why-choose-premium.css" />
+
+  <!-- Font Awesome (only once needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+
+
+</head>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servixo | Premium Navbar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  background: #ffffff;
+  padding-top: 70px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-brand img {
+  height: 40px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.logo-text span {
+  background: linear-gradient(90deg, #0077ff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #007bff;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-phone {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.book-btn {
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 136, 255, 0.25);
+}
+
+.book-btn:hover {
+  background: linear-gradient(135deg, #0066cc, #00aaff);
+  box-shadow: 0 6px 18px rgba(0, 119, 204, 0.35);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links,
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.97);
+    width: 100%;
+    padding: 20px 5%;
+    gap: 16px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.active,
+  .nav-right.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-right .book-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+    .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+}
+
+.navbar-brand img {
+  height: 70px; /* bigger logo */
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1d3557;
+  white-space: nowrap; /* prevent text wrapping */
+}
+
+.logo-text span {
+  color: #e63946;
+  font-weight: 800;
+}
+
+  </style>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="navbar-header">
+    <div class="navbar-brand">
+      <img src="SX_Logo_Design_-_Modern_Minimalist_Style-removebg-preview.png.png" alt="Servixo Logo" />
+      <div class="logo-text">Servixo<span>.Digital</span></div>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="nav-phone">📞 +92 311 6377509</div>
+    <a href="contact.html#contact" class="book-btn" target="_blank">Book Consultation</a>
+  </div>
+</header>
+
+<script>
+  // Scroll hide
+  document.addEventListener("DOMContentLoaded", () => {
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        navbar.classList.add("hide");
+      } else {
+        navbar.classList.remove("hide");
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  });
+
+  // Toggle menu
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+  const navRight = document.querySelector('.nav-right');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    navRight.classList.toggle('active');
+  });
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Servixo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    /* MAIN CONTACT SECTION */
+    .white-contact {
+      padding: 120px 30px 80px;
+      background: #fff;
+    }
+
+    .white-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: space-between;
+    }
+
+    /* LEFT TEXT */
+    .white-left {
+      flex: 1.1;
+      min-width: 320px;
+    }
+
+    .white-left h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #0e101a;
+    }
+
+.white-left h2 span {
+  color: #0ea5e9 /* Servixo primary blue */
+}
+
+
+    .white-left p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .white-quote {
+      margin: 30px 0;
+      padding: 20px;
+      background: #f9f9f9;
+      border-left: 5px solid #0e101a;
+      border-radius: 8px;
+      color: #555;
+      font-style: italic;
+    }
+
+    .benefit-list {
+      list-style: none;
+      margin-top: 20px;
+      padding-left: 0;
+      font-weight: 500;
+      color: #222;
+    }
+
+    .benefit-list li {
+      margin-bottom: 10px;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .benefit-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #0077ff;
+    }
+
+    .white-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    .white-stats div {
+      text-align: left;
+    }
+
+    .white-stats strong {
+      font-size: 1.8rem;
+      color: #0e101a;
+      display: block;
+    }
+
+    .white-stats span {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    /* FORM SECTION */
+    .white-right {
+      flex: 1;
+      min-width: 320px;
+      max-width: 600px;
+      background: #f5f5f5;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .white-right h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #1d3557;
+    }
+
+    .white-right p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .white-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .white-form input,
+    .white-form textarea {
+      padding: 14px 18px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+      transition: border 0.3s ease;
+    }
+
+    .white-form input:focus,
+    .white-form textarea:focus {
+      border-color: #0077b6;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+    }
+
+    .white-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+.white-form button {
+  background: linear-gradient(135deg, #0ea5e9, #1d3557);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+    .white-form button:hover {
+      background: linear-gradient(135deg, #0077b6, #0ea5e9);
+      box-shadow: 0 8px 20px rgba(0, 119, 182, 0.3);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .white-container {
+        flex-direction: column;
+        gap: 60px;
+      }
+
+      .white-left,
+      .white-right {
+        width: 100%;
+      }
+
+      .white-left h2 {
+        font-size: 2rem;
+      }
+
+      .white-stats {
+        gap: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ CONTACT SECTION -->
+  <section class="white-contact">
+    <div class="white-container">
+
+      <!-- LEFT TEXT -->
+      <div class="white-left">
+        <h2><span>It Starts With</span> A Conversation</h2>
+        <p>
+          Imagine your brand — elevated, sharpened, unstoppable.<br><br>
+          Whether it’s building from scratch or reigniting a legacy, we become your creative extension — fully invested in your story, voice, and growth.
+        </p>
+
+        <div class="white-quote">
+          "We don't just build websites. We build digital stages where your story performs."
+        </div>
+
+        <ul class="benefit-list">
+          <li>💡 Personalized brand & design direction</li>
+          <li>🔧 End-to-end strategy, UI/UX & development</li>
+          <li>🌍 Multilingual, scalable, global-ready</li>
+          <li>🤝 Long-term digital partnership mindset</li>
+        </ul>
+
+        <div class="white-stats">
+          <div><strong>50+</strong><span> Projects Delivered</span></div>
+          <div><strong>95%</strong><span> Client Satisfaction</span></div>
+          <div><strong>3+</strong><span> Years of Experience</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT FORM -->
+<div class="white-right">
+  <h3>Let’s Create Something Timeless</h3>
+  <p>Tell us what you have in mind. We’ll take care of the rest.</p>
+
+  <form action="https://formsubmit.co/servixodigital@gmail.com" method="POST" class="white-form">
+    <!-- Input Fields -->
+    <input type="text" name="name" placeholder="Your Full Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="text" name="company" placeholder="Brand or Company (Optional)" />
+    <input type="text" name="service" placeholder="Service Needed (e.g. Website, Branding)" />
+    <textarea name="message" placeholder="Share your vision, pain points, or wildest idea…" required></textarea>
+
+    <!-- Hidden fields -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://servixodigital.online/thank-you.html">
+    <input type="hidden" name="_autoresponse" value="🎉 Thank you for contacting Servixo Digital!
+
+We’ve received your message and will get back to you shortly.
+
+While you wait, feel free to explore our services:
+https://servixodigital.online/services
+
+Best regards,  
+Team Servixo 💼">
+
+    <button type="submit">Send Your Message 🚀</button>
+  </form>
+</div>
+
+
+    </div>
+  </section>
+
+</body>
+</html>
