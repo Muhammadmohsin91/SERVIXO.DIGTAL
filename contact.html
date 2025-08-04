@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Contact Us | Servixo Digital – Let's Build Something Great</title>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="services.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="counters.css" />
+  <link rel="stylesheet" href="why-choose-premium.css" />
+
+  <!-- Font Awesome (only once needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+
+
+</head>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servixo | Premium Navbar</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --primary: #0077ff;
+      --gradient: linear-gradient(135deg, #007bff, #00c6ff);
+      --text-dark: #1a1a1a;
+      --text-light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+    }
+
+    header.navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 18px 6%;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .navbar.shrink {
+      padding: 12px 6%;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      white-space: nowrap;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+      margin-right: 8px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+      padding: 4px 0;
+    }
+
+    .nav-links li a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: 0.3s ease;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .cta-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .whatsapp-link {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .whatsapp-link:hover {
+      background-color: #128c7e;
+    }
+
+    .cta-btn {
+      background: var(--gradient);
+      color: var(--text-light);
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 136, 255, 0.25);
+    }
+
+    .cta-btn:hover {
+      box-shadow: 0 8px 22px rgba(0, 136, 255, 0.35);
+      transform: scale(1.04);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #333;
+    }
+
+@media (max-width: 768px) {
+  .nav-center,
+  .cta-area {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 5%; /* Less padding */
+  }
+
+  .navbar-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.4rem;
+  }
+
+  .navbar.active .nav-center,
+  .navbar.active .cta-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px; /* Reduced vertical gap */
+    margin-top: 10px;
+    background: #fff;
+    padding: 12px 16px; /* Less padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Softer shadow */
+  }
+
+  .navbar.active .cta-btn {
+    width: auto;
+    padding: 10px 20px; /* Smaller button */
+    font-size: 0.9rem;
+  }
+}
+
+.menu-toggle.active i::before {
+  content: "\f00d"; /* Font Awesome times icon */
+}
+  </style>
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar-row">
+      <div class="logo">
+        <img src="SX_Logo_Design_-_Modern_Minimalist_Style-removebg-preview.png.png" alt="Servixo Logo" />
+        Servixo<span>.Digital</span>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+<div class="nav-center" id="nav-center">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+
+    <!-- CTA Area -->
+    <div class="cta-area">
+      <!-- WhatsApp chat icon -->
+      <a href="https://wa.me/923116377509?text=Hi%2C%20I'm%20interested%20in%20your%20services.%20Could%20you%20please%20provide%20more%20information%3F" target="_blank" class="whatsapp-link" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+
+      <!-- Start Now goes to contact page -->
+      <a href="#contact" class="cta-btn">Start Your Project</a>
+    </div>
+  </header>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const toggle = document.getElementById('menu-toggle');
+
+    toggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('shrink', window.scrollY > 50);
+    });
+  </script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Servixo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --accent: #0ea5e9;
+      --dark: #1e293b;
+      --light: #f9fafb;
+      --gray: #6b7280;
+      --bg-gradient: linear-gradient(135deg, #f0fdfa, #e0f2fe);
+      --form-bg: #ffffff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+.contact-wrapper {
+  padding: 120px 5% 80px 5%; /* top, right, bottom, left */
+  background: var(--bg-gradient);
+  position: relative;
+  overflow: hidden;
+}
+
+
+    .contact-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    .contact-left {
+      animation: fadeInLeft 1s ease forwards;
+    }
+
+    .contact-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .contact-left h2 span {
+      background: linear-gradient(90deg, var(--accent), var(--dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-left p {
+      font-size: 1.05rem;
+      color: var(--gray);
+      margin-bottom: 30px;
+      max-width: 550px;
+    }
+
+    .quote-box {
+      background: var(--form-bg);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      font-style: italic;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 36px;
+    }
+
+    .benefits {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      gap: 14px;
+      margin-bottom: 50px;
+    }
+
+    .benefits li {
+      font-weight: 500;
+      position: relative;
+      padding-left: 28px;
+      color: var(--dark);
+    }
+
+    .benefits li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 22px 24px;
+      border-radius: 16px;
+      border-left: 4px solid var(--accent);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .stat-card i {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .stat-card h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .stat-card p {
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+
+    .contact-form-container {
+      background: var(--form-bg);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      animation: fadeInRight 1s ease forwards;
+    }
+
+    .contact-form-container h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+
+    .contact-form-container p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      font-size: 15px;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-group label {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      background: #fff;
+      padding: 0 6px;
+      font-size: 0.85rem;
+      color: var(--gray);
+      pointer-events: none;
+      transition: 0.2s ease;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 12px;
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
+    button {
+      padding: 14px 22px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent), var(--dark));
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #0077b6, var(--accent));
+      box-shadow: 0 6px 16px rgba(0, 119, 182, 0.2);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 960px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-left h2 {
+        font-size: 2.4rem;
+      }
+
+      .contact-form-container {
+        padding: 32px;
+      }
+    }
+
+    @keyframes fadeInLeft {
+      0% { opacity: 0; transform: translateX(-40px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      0% { opacity: 0; transform: translateX(40px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+
+<section class="contact-wrapper">
+  <div class="contact-grid">
+    <!-- Left Content -->
+    <div class="contact-left">
+      <h2><span>It Starts With</span> A Conversation</h2>
+      <p>Imagine your brand — elevated, sharpened, unstoppable. We become your creative extension — fully invested in your story, voice, and growth.</p>
+      <div class="quote-box">"We don't just build websites. We build digital stages where your story performs."</div>
+
+      <ul class="benefits">
+        <li>💡 Personalized brand & design direction</li>
+        <li>🔧 End-to-end strategy, UI/UX & development</li>
+        <li>🌍 Multilingual, scalable, global-ready</li>
+        <li>🤝 Long-term digital partnership mindset</li>
+      </ul>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i class="fas fa-handshake"></i>
+          <h4>Long-Term Partnerships</h4>
+          <p>Clients come back — and bring others with them. We build relationships based on trust, results, and reliability.</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-lightbulb"></i>
+          <h4>Problem-Solving First</h4>
+          <p>We choose projects that drive real growth, not just good design. Every solution is built with purpose.</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-check-circle"></i>
+          <h4>Consistent Delivery</h4>
+          <p>We deliver what we promise — on time, with clarity, and full transparency at every step.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Form -->
+    <div class="contact-form-container">
+      <h3>Let’s Create Something Timeless</h3>
+      <p>Tell us what you have in mind. We’ll take care of the rest.</p>
+
+      <form action="https://formsubmit.co/servixodigital@gmail.com" method="POST">
+        <div class="form-group">
+          <input type="text" name="name" required placeholder=" " />
+          <label>Your Full Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" required placeholder=" " />
+          <label>Email Address</label>
+        </div>
+        <div class="form-group">
+          <input type="text" name="company" placeholder=" " />
+          <label>Brand or Company (Optional)</label>
+        </div>
+        <div class="form-group">
+          <input type="text" name="service" placeholder=" " />
+          <label>Service Needed</label>
+        </div>
+        <div class="form-group">
+          <textarea name="message" required placeholder=" "></textarea>
+          <label>Your Vision, Pain Points, or Wildest Idea</label>
+        </div>
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://servixodigital.online/thank-you.html">
+        <input type="hidden" name="_autoresponse" value="🎉 Thank you for contacting Servixo Digital!
+
+We’ve received your message and will get back to you shortly.
+
+While you wait, feel free to explore our services:
+https://servixodigital.online/services
+
+Best regards,  
+Team Servixo 💼">
+
+        <button type="submit">Send Your Message 🚀</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
+
+    </div>
+  </section>
+
+
+    </div>
+  </section>
+
+</body>
+</html>
