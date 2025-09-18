@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Contact Us | Servixo Digital – Let's Build Something Great</title>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="services.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="counters.css" />
+  <link rel="stylesheet" href="why-choose-premium.css" />
+
+  <!-- Font Awesome (only once needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+
+
+</head>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servixo Navbar Premium</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+/* ========================
+Global
+======================== */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f9fafc;
+  overflow-x: hidden;
+  height: 200vh; /* demo ke liye scroll */
+}
+
+/* ========================
+Navbar - Premium
+======================== */
+header.navbar {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1250px;
+  padding: 8px 28px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+  z-index: 1000;
+  height: 90px;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Scroll Background */
+header.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  height: 80px;
+}
+
+/* Logo */
+.logo img {
+  height: 250px;
+  width: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+header.navbar.scrolled .logo img {
+  height: 220px;
+}
+
+/* Desktop Nav */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  transition: width 0.3s ease;
+}
+.nav-links li a:hover::after {
+  width: 100%;
+}
+.nav-links li a:hover {
+  color: #0077ff;
+}
+
+/* CTA Area */
+.cta-area {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* WhatsApp Button */
+.whatsapp-link {
+  background: linear-gradient(135deg, #25D366, #1ebe57);
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.whatsapp-link:hover {
+  background: linear-gradient(135deg, #1ebe57, #128c7e);
+  transform: translateY(-3px) scale(1.07);
+  box-shadow: 0 10px 22px rgba(18, 140, 126, 0.45);
+}
+.whatsapp-link i {
+  font-size: 1.2rem;
+}
+
+/* Gradient Glow Effect */
+.whatsapp-link::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.25) 10%, transparent 40%);
+  transform: rotate(25deg);
+  animation: shine 3s infinite;
+}
+@keyframes shine {
+  0% { transform: translateX(-150%) rotate(25deg); }
+  100% { transform: translateX(150%) rotate(25deg); }
+}
+
+/* Start Project Button */
+.cta-btn {
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,136,255,0.35);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.cta-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 24px rgba(0,136,255,0.45);
+  background: linear-gradient(135deg, #005ce6, #00aaff);
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  z-index: 1100;
+}
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(15,23,42,0.98);
+  backdrop-filter: blur(18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 28px;
+  padding-top: 80px;
+  transition: right 0.4s ease;
+  z-index: 2000;
+}
+.mobile-menu.active { right: 0; }
+
+/* Mobile Menu Links */
+.mobile-menu a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.mobile-menu a:hover {
+  color: #00c6ff;
+}
+
+/* Mobile CTA buttons */
+.mobile-cta {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 90%;              /* ✅ full width lo */
+  max-width: 280px;
+  align-items: center;       /* ✅ sari cheeze center */
+  text-align: center;        /* ✅ text bhi center */
+}
+
+.mobile-cta .whatsapp-link,
+.mobile-cta .cta-btn {
+  width: 90%;
+  justify-content: center;
+  text-align: center;        /* ✅ button ka text bhi center */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #ffffffa1;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  padding: 6px 10px;
+  border-radius: 50%;
+}
+.close-btn:hover {
+  color: #00c6ff;
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav-center, .cta-area { display: none; }
+  .menu-toggle { display: flex; }
+  .logo img { height: 200px; margin-left: -20px; }
+}
+  </style>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="logo">
+    <img src="servixo__1_-removebg-preview.png" alt="Servixo Logo" />
+  </div>
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span><span></span><span></span>
+  </div>
+  <nav class="nav-center">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="Ourportfolio.html">Our Portfolio</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="cta-area">
+    <a href="https://wa.me/923116377509" target="_blank" class="whatsapp-link">
+       <i class="fab fa-whatsapp"></i><span>Chat Now</span>
+    </a>
+    <a href="#contact" class="cta-btn">Start Your Project</a>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <span class="close-btn" id="close-btn">&times;</span>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="Ourportfolio.html">Our Portfolio</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+
+  <!-- Mobile CTA Buttons -->
+  <div class="mobile-cta">
+    <a href="https://wa.me/923116377509" target="_blank" class="whatsapp-link">
+      <i class="fab fa-whatsapp"></i><span>Chat Now</span>
+    </a>
+    <a href="#contact" class="cta-btn">Start Your Project</a>
+  </div>
+</div>
+
+<script>
+const navbar = document.getElementById('navbar');
+const toggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeBtn = document.getElementById('close-btn');
+
+// Mobile menu toggle
+toggle.addEventListener('click', () => {
+  mobileMenu.classList.add('active');
+});
+closeBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('active');
+});
+
+// Scroll listener
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled'); 
+  } else {
+    navbar.classList.remove('scrolled'); 
+  }
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Servixo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --accent: #0d83e4;
+      --dark: #1e293b;
+      --light: #f9fafb;
+      --gray: #6b7280;
+      --bg-gradient: linear-gradient(135deg, #0d83e410, #0d83e411);
+      --form-bg: #ffffff;
+      --shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); }
+
+    .contact-wrapper {
+      padding: 120px 5% 80px 5%;
+      background: var(--bg-gradient);
+      position: relative;
+    }
+
+    .contact-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    /* LEFT CONTENT */
+    .contact-left {
+      animation: fadeInLeft 1s ease forwards;
+    }
+
+    .contact-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .contact-left h2 span {
+      background: linear-gradient(90deg, var(--accent), var(--dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-left p {
+      font-size: 1.05rem;
+      color: var(--gray);
+      margin-bottom: 30px;
+      max-width: 550px;
+    }
+
+    .quote-box {
+      background: var(--form-bg);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      font-style: italic;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 36px;
+    }
+
+    .benefits {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-bottom: 50px;
+    }
+
+    .benefits li {
+      font-weight: 500;
+      position: relative;
+      padding-left: 28px;
+      color: var(--dark);
+    }
+
+    .benefits li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 20px;
+    }
+
+    .stat-card {
+      background: #fff;
+      padding: 22px 24px;
+      border-radius: 16px;
+      border-left: 4px solid var(--accent);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    .stat-card i {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .stat-card h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .stat-card p {
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+
+    /* RIGHT FORM */
+    .contact-form-container {
+      background: var(--form-bg);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      animation: fadeInRight 1s ease forwards;
+    }
+
+    .contact-form-container h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+
+    .contact-form-container p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+
+    form { display: grid; gap: 18px; }
+
+    .form-group {
+      position: relative;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      font-size: 15px;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-group label {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      background: #fff;
+      padding: 0 6px;
+      font-size: 0.85rem;
+      color: var(--gray);
+      pointer-events: none;
+      transition: 0.2s ease;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 12px;
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
+    button {
+      padding: 14px 22px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent), var(--dark));
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #0077b6, var(--accent));
+      box-shadow: 0 6px 16px rgba(0, 119, 182, 0.2);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 960px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-left h2 { font-size: 2.4rem; }
+      .contact-form-container { padding: 32px; }
+    }
+
+    /* Animations */
+    @keyframes fadeInLeft {
+      0% { opacity: 0; transform: translateX(-40px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      0% { opacity: 0; transform: translateX(40px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+
+    
+<!-- Hero Section -->
+<section class="portfolio-hero">
+  <div class="hero-container">
+    <h1>Our Work Portfolio</h1>
+    <p>Explore the websites we’ve designed for startups, brands, and luxury clients — each crafted with creativity, precision, and a modern touch to bring every vision to life.</p>
+  </div>
+</section>
+
+<!-- Portfolio Grid -->
+<section class="premium-product-grid">
+  <div class="grid-container">
+    
+    <!-- Example Project -->
+    <div class="product">
+      <div class="mockup-frame clean-frame">
+        <img src="screencapture-127-0-0-1-5500-index-html-2025-09-11-03_44_35.png" alt="Modern Business Website">
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Travel Website</h3>
+        <p class="product-desc"> A modern, responsive platform built for travel lovers and agencies
+    designed to showcase destinations with clarity, style, and easy booking features.</p>
+      </div>
+    </div>
+    <div class="product">
+      <div class="mockup-frame clean-frame">
+        <img src="screencapture-127-0-0-1-5500-index-html-2025-09-11-04_01_11.png" alt="Modern Business Website">
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Women’s Fashion E-Store</h3>
+        <p class="product-desc">A stylish and responsive online store designed for modern women’s fashion. Built with a clean layout, easy navigation, and secure checkout to create a smooth shopping experience that drives sales and engagement.</p>
+      </div>
+    </div>
+    <div class="product">
+      <div class="mockup-frame clean-frame">
+        <img src="screencapture-127-0-0-1-5500-index-html-2025-09-04-06_38_27.png" alt="Modern Business Website">
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Visa Services Website</h3>
+        <p class="product-desc">A professional and responsive website built for visa and immigration services. Designed with a clean layout, clear information flow, and simple application steps to help clients apply with ease and confidence.</p>
+      </div>
+    </div>
+    <div class="product">
+      <div class="mockup-frame clean-frame">
+        <img src="screencapture-127-0-0-1-5500-index-html-2025-09-14-01_40_40.png" alt="Modern Business Website">
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Finance Services Website</h3>
+        <p class="product-desc">A sleek and trustworthy website built for financial services and consulting firms. Designed with a professional layout, secure structure, and modern visuals to build client confidence and drive business growth.</p>
+      </div>
+    </div>
+    <div class="product">
+      <div class="mockup-frame clean-frame">
+        <img src="screencapture-127-0-0-1-5500-index-html-2025-09-14-02_04_15.png" alt="Modern Business Website">
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Creative Agency Website</h3>
+        <p class="product-desc">A modern and responsive website crafted for creative and digital agencies. Focused on bold visuals, clear messaging, and lead generation to help agencies showcase their work and attract new clients.</p>
+      </div>
+    </div>
+    <div class="product">
+      <div class="mockup-frame clean-frame">
+        <img src="screencapture-127-0-0-1-5500-index-html-2025-09-14-02_37_28.png" alt="Modern Business Website">
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Company Website</h3>
+        <p class="product-desc">A professional, responsive website built for modern companies and enterprises. Designed to highlight services, share the brand story, and create trust with clients through a clean and impactful layout.</p>
+      </div>
+    </div>
+    <div class="product">
+      <div class="mockup-frame clean-frame">
+        <img src="screencapture-127-0-0-1-5500-index-html-2025-09-14-00_55_48.png" alt="Modern Business Website">
+      </div>
+      <div class="product-details">
+        <h3 class="product-name">Admin Panel — E-Commerce Store</h3>
+        <p class="product-desc">A clean, powerful admin panel designed for e-commerce stores. Built for easy product management, order tracking, and analytics — so store owners can manage inventory, process orders, and grow sales with speed and confidence.</p>
+      </div>
+    </div>
+    <!-- Add more products here -->
+    
+  </div>
+</section>
+
+<style>
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9fafc;
+  color: #111;
+}
+/* Hero Section */
+/* Hero Section */
+.portfolio-hero {
+  text-align: center;
+  padding: 6rem 2rem 5rem;
+  background: linear-gradient(135deg, #0d83e4, #3a3d98);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  /* 🔥 Height zyada */
+  min-height: 45vh; /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio-hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 10%, transparent 60%);
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(260deg); }
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.portfolio-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.308);
+}
+
+.portfolio-hero p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+
+
+/* =======================
+Portfolio Grid - Glass Heavy
+======================= */
+.premium-product-grid {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #f8faff, #fdfdfd);
+  position: relative;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: stretch;
+}
+
+/* Product Card */
+.product {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  overflow: hidden;
+}
+.product:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.15);
+}
+
+/* Mockup Frame */
+.clean-frame {
+  border: 12px solid #fff;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.06), 0 10px 25px rgba(0,0,0,0.08);
+  height: 500px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.clean-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Scrollbar */
+.clean-frame::-webkit-scrollbar { width: 6px; }
+.clean-frame::-webkit-scrollbar-thumb {
+  background: rgba(90,124,255,0.5);
+  border-radius: 10px;
+}
+.clean-frame::-webkit-scrollbar-thumb:hover { background: rgba(90,124,255,0.8); }
+
+/* Text */
+.product-details {
+  padding: 1.5rem;
+  text-align: left;
+}
+.product-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.6rem;
+}
+.product-desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .grid-container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .grid-container { grid-template-columns: 1fr; }
+  .portfolio-hero h1 { font-size: 2.4rem; }
+  .portfolio-hero p { font-size: 1rem; }
+  .clean-frame { height: 300px; }
+}
+</style>
+
+
+
+
+
+</body>
+</html>
