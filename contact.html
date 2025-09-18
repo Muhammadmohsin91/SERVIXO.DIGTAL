@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Contact Us | Servixo Digital – Let's Build Something Great</title>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="services.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="counters.css" />
+  <link rel="stylesheet" href="why-choose-premium.css" />
+
+  <!-- Font Awesome (only once needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+
+
+</head>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Servixo Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ========================
+    Global
+    ======================== */
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      background: #f9fafc;
+      overflow-x: hidden;
+      color: #1e293b;
+    }
+
+    /* ========================
+    Navbar - Premium
+    ======================== */
+    header.navbar {
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 92%;
+      max-width: 1250px;
+      padding: 8px 28px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.4s ease;
+      z-index: 1000;
+      height: 90px;
+      background: transparent;
+      box-shadow: none;
+    }
+    header.navbar.scrolled {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      height: 80px;
+    }
+    .logo img {
+      height: 250px;
+      width: auto;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    header.navbar.scrolled .logo img {
+      height: 220px;
+    }
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+    .nav-links li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .nav-links li a::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, #0077ff, #00c6ff);
+      transition: width 0.3s ease;
+    }
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+    .nav-links li a:hover {
+      color: #0077ff;
+    }
+    .cta-area {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .whatsapp-link {
+      background: linear-gradient(135deg, #25D366, #1ebe57);
+      color: #fff;
+      padding: 13px 26px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .whatsapp-link:hover {
+      background: linear-gradient(135deg, #1ebe57, #128c7e);
+      transform: translateY(-3px) scale(1.07);
+      box-shadow: 0 10px 22px rgba(18, 140, 126, 0.45);
+    }
+    .whatsapp-link i {
+      font-size: 1.2rem;
+    }
+    .cta-btn {
+      background: linear-gradient(135deg, #0077ff, #00c6ff);
+      color: #fff;
+      padding: 13px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 136, 255, 0.35);
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 24px rgba(0, 136, 255, 0.45);
+      background: linear-gradient(135deg, #005ce6, #00aaff);
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      z-index: 1100;
+    }
+    .menu-toggle span {
+      width: 28px;
+      height: 3px;
+      background: #333;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.98);
+      backdrop-filter: blur(18px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 28px;
+      padding-top: 80px;
+      transition: right 0.4s ease;
+      z-index: 2000;
+    }
+    .mobile-menu.active {
+      right: 0;
+    }
+    .mobile-menu a {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .mobile-menu a:hover {
+      color: #00c6ff;
+    }
+    .mobile-cta {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 90%;
+      max-width: 280px;
+      align-items: center;
+      text-align: center;
+    }
+    .mobile-cta .whatsapp-link,
+    .mobile-cta .cta-btn {
+      width: 90%;
+      justify-content: center;
+      text-align: center;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2rem;
+      color: #ffffffa1;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      padding: 6px 10px;
+      border-radius: 50%;
+    }
+    .close-btn:hover {
+      color: #00c6ff;
+      transform: rotate(10deg) scale(1.2);
+    }
+    @media (max-width: 768px) {
+      .nav-center,
+      .cta-area {
+        display: none;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .logo img {
+        height: 200px;
+        margin-left: -20px;
+      }
+    }
+
+/* ========================
+   Contact Section Premium
+======================== */
+:root {
+  --accent: #0d83e4;
+  --accent2: #00c6ff;
+  --dark: #1e293b;
+  --light: #f9fafb;
+  --gray: #6b7280;
+  --form-bg: #ffffff;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.contact-wrapper {
+  padding: 140px 6% 80px;
+  background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Gradient Blobs */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+  z-index: 0;
+  animation: float 8s infinite ease-in-out alternate;
+}
+.blob1 {
+  top: -120px;
+  left: -120px;
+  width: 280px;
+  height: 280px;
+  background: var(--accent);
+}
+.blob2 {
+  bottom: -150px;
+  right: -150px;
+  width: 350px;
+  height: 350px;
+  background: var(--accent2);
+}
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(30px); }
+}
+
+/* Grid Layout */
+.contact-grid {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left Section */
+.contact-left h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.contact-left h2 span {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-left p {
+  color: var(--gray);
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+/* Quote Box */
+.quote-box {
+  background: var(--form-bg);
+  padding: 22px 28px;
+  border-left: 5px solid var(--accent);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  font-style: italic;
+  margin-bottom: 38px;
+  transition: transform 0.3s ease;
+}
+.quote-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Benefits List */
+.benefits {
+  list-style: none;
+  margin-bottom: 48px;
+  display: grid;
+  gap: 16px;
+}
+.benefits li {
+  position: relative;
+  font-weight: 500;
+  color: var(--dark);
+  padding-left: 34px;
+  transition: color 0.3s ease;
+}
+.benefits li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+.benefits li:hover {
+  color: var(--accent);
+}
+
+/* Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--accent);
+  transition: all 0.35s ease;
+}
+.stat-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+}
+.stat-card i {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+  color: var(--accent);
+}
+.stat-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.stat-card p {
+  font-size: 0.96rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* Right Form */
+.contact-form-container {
+  background: #fff;
+  padding: 46px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 3;
+  transition: transform 0.3s ease;
+}
+.contact-form-container:hover {
+  transform: translateY(-4px);
+}
+.contact-form-container h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.contact-form-container p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+/* Floating Labels Form */
+form {
+  display: grid;
+  gap: 22px;
+}
+.form-group {
+  position: relative;
+}
+.form-group input,
+.form-group textarea {
+  width: 90%;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(13, 131, 228, 0.1);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: var(--gray);
+  background: #fff;
+  padding: 0 6px;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 14px;
+  font-size: 0.74rem;
+  color: var(--accent);
+}
+
+/* Button */
+button {
+  border: none;
+  padding: 16px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+button:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 26px rgba(0, 136, 255, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .contact-left h2 {
+    font-size: 2.4rem;
+  }
+  .contact-form-container {
+    padding: 34px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="logo">
+      <img src="servixo__1_-removebg-preview.png" alt="Servixo Logo" />
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+    <nav class="nav-center">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Ourportfolio.html">Our Portfolio</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cta-area">
+      <a href="https://wa.me/923116377509" target="_blank" class="whatsapp-link">
+        <i class="fab fa-whatsapp"></i><span>Chat Now</span>
+      </a>
+      <a href="#contact" class="cta-btn">Start Your Project</a>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="Ourportfolio.html">Our Portfolio</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-cta">
+      <a href="https://wa.me/923116377509" target="_blank" class="whatsapp-link">
+        <i class="fab fa-whatsapp"></i><span>Chat Now</span>
+      </a>
+      <a href="#contact" class="cta-btn">Start Your Project</a>
+    </div>
+  </div>
+
+<!-- Contact Section -->
+<section class="contact-wrapper" id="contact">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="contact-grid">
+    <!-- Left -->
+    <div class="contact-left">
+      <h2><span>Let’s Talk</span> About Your Vision</h2>
+      <p>Your business deserves more than just a website — it deserves a digital presence that attracts, engages, and converts. At Servixo, we don’t just deliver services, we build long-term growth systems.</p>
+
+      <div class="quote-box">"We transform ideas into digital assets that work as hard as you do."</div>
+
+      <ul class="benefits">
+        <li>💡 Web Development – Modern, conversion-focused websites</li>
+        <li>⚡ SEO & Marketing – Drive traffic and maximize ROI</li>
+        <li>📈 Scalable Growth Strategies for long-term success</li>
+        <li>🤝 Partnerships that go beyond projects</li>
+      </ul>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i class="fas fa-bullseye"></i>
+          <h4>Focused on ROI</h4>
+          <p>Every website, SEO plan, and ad campaign is designed to deliver measurable business growth.</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-lightbulb"></i>
+          <h4>Smart Strategies</h4>
+          <p>From web design to digital marketing, we combine creativity and data to build lasting impact.</p>
+        </div>
+      </div>
+    </div>
+
+
+      <!-- Right Form -->
+      <div class="contact-form-container">
+        <h3>Start Your Project 🚀</h3>
+        <p>Fill out the form below and let’s craft something extraordinary together.</p>
+        <form action="https://formsubmit.co/servixodigital@gmail.com" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" required placeholder=" " />
+            <label>Your Full Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" required placeholder=" " />
+            <label>Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="company" placeholder=" " />
+            <label>Brand or Company (Optional)</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="service" placeholder=" " />
+            <label>Service Needed</label>
+          </div>
+          <div class="form-group">
+            <textarea name="message" required placeholder=" "></textarea>
+            <label>Describe Your Vision</label>
+          </div>
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://servixodigital.online/thank-you.html" />
+          <input type="hidden" name="_autoresponse" value="🎉 Thank you for contacting Servixo Digital! We’ll get back to you shortly." />
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+    const toggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("close-btn");
+
+    toggle.addEventListener("click", () => {
+      mobileMenu.classList.add("active");
+    });
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+</html>
